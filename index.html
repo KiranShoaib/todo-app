@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-gray-900">
+    <div class="container mx-auto p-20">
+      <div class="grid gap-2 justify-center items-center">
+        <div
+          class="card bg-white w-xs sm:w-xl md:w-2xl border rounded-3xl grid p-5"
+        >
+          <h1 class="text-center text-teal-900 text-4xl">Todo App</h1>
+          <input
+            type="text"
+            placeholder="Enter Text To Search Task"
+            id="search"
+            class="border border-gray-400 w-full rounded h-12 pl-4 mt-6"
+          />
+          <form>
+            <input
+              type="text"
+              placeholder="Enter Text To Create Task"
+              id="task"
+              class="border border-gray-400 w-full rounded h-12 pl-4 mt-6"
+            />
+            <input
+              type="submit"
+              value="Create Task"
+              id="btn"
+              class="rounded w-full h-12 bg-teal-900 text-white mt-6"
+            />
+          </form>
+        </div>
+        <div
+          class="card bg-white w-xs sm:w-xl md:w-2xl border rounded-3xl grid p-5"
+        >
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

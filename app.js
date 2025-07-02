@@ -52,19 +52,26 @@ formElement.addEventListener("submit", function (e) {
 let searchElement = document.querySelector("#search");
 
 searchElement.addEventListener("input", function () {
-  let searchText = searchElement.value;
+  let searchText = searchElement.value.toLowerCase();
+
   let allLiElementsArray = document.querySelectorAll("li");
 
   for (let i = 0; i < allLiElementsArray.length; i++) {
+
     let requireLiElement = allLiElementsArray[i];
-    let requireLiText = allLiElementsArray[i].firstChild.data;
+
+    let requireLiText = allLiElementsArray[i].firstChild.data.toLowerCase();
 
     if (requireLiText.includes(searchText)) {
+
       requireLiElement.classList.remove("hidden");
       requireLiElement.classList.add("flex");
+      
     } else {
+
       requireLiElement.classList.remove("flex");
       requireLiElement.classList.add("hidden");
+      
     }
   }
 });
